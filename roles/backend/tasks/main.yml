@@ -1,7 +1,7 @@
-#- name: verfiy nodejs
- # ansible.builtin.shell: type npm
-  #register: npm
-#  ignore_errors: yes
+- name: verfiy nodejs
+  ansible.builtin.shell: type npm
+  register: npm
+  ignore_errors: yes
 
 
 #- name: reas npm
