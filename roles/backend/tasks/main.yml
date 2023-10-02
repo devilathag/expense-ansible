@@ -1,10 +1,10 @@
-- name: verfiy nodejs
-  ansible.builtin.shell: type npm
-  register: npm
+#- name: verfiy nodejs
+# ansible.builtin.shell: type npm
+#  register: npm
 
-- name: reas npm
-  ansible.builtin.debug:
-    msg: "{{npm}}"
+#- name: reas npm
+ # ansible.builtin.debug:
+  #  msg: "{{npm}}"
 
 - name: Install NodeJS Repos
   ansible.builtin.shell: https://rpm.nodesource.com/setup_lts.x | bash
