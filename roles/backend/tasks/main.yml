@@ -17,6 +17,7 @@
     name: nodejs
     state:  present
   when: npm.rc != 0
+
 - name: Copy Backend Service File
   ansible.builtin.template:
     src: backend.service
@@ -31,7 +32,7 @@
     name: common
     tasks_from: app_prereq
 
-- name: Download Dependencies
+- name: install node js Dependencies
   ansible.builtin.shell: npm install
   args:
     chdir: /app
