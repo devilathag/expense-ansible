@@ -1,12 +1,2 @@
-- name: clone infra ansible repo
-  ansible.builtin.git:
-    repo: https://github.com/devilathag/Infra-Ansible1.git
-    dest: /tmp/infra-ansible
-
-- name: run shell command
-  shell: pwd
-  register: out
-
-- name: debug
-  debug:
-    msg: "{{ out }}"
+- name: run filebeat command
+  ansible.builtin.shell: ansible-pull -i localhost, -U https://github.com/devilathag/Infra-Ansible1 elk.yml -e elk_component=filebeat
